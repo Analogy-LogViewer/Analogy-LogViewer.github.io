@@ -23,8 +23,9 @@ title: Analogy Log Viewer
 description: >- # this means to ignore newlines until "baseurl:"
   The home of Anlogy Log Viewer blog posts and future documentation
 baseurl: "" # the subpath of your site, e.g. /blog
+BASE_PATH : /RICENCODE
 url: "https://analogy-logviewer.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-github_username:  Analogy Log Viewer
+github_username: Analogy-LogViewer
 
 # Build settings
 theme: minima
