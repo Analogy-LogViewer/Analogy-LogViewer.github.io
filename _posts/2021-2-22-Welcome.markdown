@@ -27,7 +27,7 @@ I have also created AspNetCore extension that you can plug directly into your .N
 The application is very customizable to the end user needs. You can create yor own data providers with built-in specialized to your own needs.
 
 for example: the basic data provider will look something like this:
-![Main UI]({{ site.url }}/_posts/2021-2-22-mainUI.jpg)
+![Main UI](./2021-2-22-mainUI.jpg)
 but since you can plug in your own, you can create custom made provider.
 ![Custom Provider](2021-2-22-CustomProvider.jpg)
 
