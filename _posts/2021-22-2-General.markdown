@@ -1,0 +1,64 @@
+Hi all,
+
+A lot has changed from my last year post of presenting Analogy Log Viewer.
+The application has grown from few repositories to almost 50 repositories.
+A new version is released every 2-3 weeks with improvements and more providers.
+
+###Offline Data Providers
+There are parsers for many known logging frameworks and formats like: Serilog, NLog, Json Parser, XML Parser, Regular Expression Parser,
+
+Windows Event log Parser(Supports real time Event listening) and many special parsers such as Visual Studio crash log parser, Whatsapp Parser.
+
+What’s really new: Real Time Streaming:
+During the last year I worked on adding Real time log streaming. Viewing logs in real time is very important to debugging and analyzing issues. For this purpose I have added gRPC support and created Windows Service that receives all logs and shows them in real time in the application.
+
+the client/Server are written in gRPC so there is ability to logs messages from other languages like C++, Java, Python gRPC client and other.
+
+Using gRPC we can stream logs from many executables/computers and view them together in one single window with all standard features like filtering, bookmarking, exporting and saving. The Windows service also has a flag to save all the log to a log file to view later on again if needed.
+
+In the past other frameworks were used (WCF, .net Remoting) for streaming but gRPC is the go to framework to using in .NET (as it is first citizen in the .NET ecosystem).
+
+After creating the windows service I have added many streaming clients to Analogy Log Server: I created NLog Target and Serilog Sink clients that by configuring the NLOG.config and appSettings.json files you can start sending your logs the the Server/Viewer.
+
+More clients that connect to Analogy Log Server will created as needed (like RabbitMQ/Kafka). Those can stream in their native technologies and Analogy Log Serve connect to the server to retrieve those logs
+
+I have also created AspNetCore extension that you can plug directly into your .Net Core Apps.
+
+The application is very customizable to the end user needs. You can create yor own data providers with built-in specialized to your own needs.
+
+for example: the basic data provider will look something like this:
+![Main UI](2021-22-2-mainUI.jpg)
+but since you can plug in your own, you can create custom made provider.
+![Custom Provider](2021-22-2-CustomProvider.jpg)
+
+In this data provider there are additional tools, kafka Sniffer, new icons and ECG plotter. All done with just few interfaces implementations
+![Custom Provider plot](2021-22-2-CustomProviderPlot.jpg)
+
+###Tools
+
+Beside the standard filtering are viewing logs I have added many analyzing tools: I added many types of charts and graphs like the following:
+
+![Tools](2021-22-2-tools1.jpg)
+
+or timeline plots:
+![Timeline](2021-22-2-tools2.jpg)
+
+and even Json Visualizer that can create tree like view of any Json object (including embedded Json in your log message):
+[!Json Viewer](2021-22-2-tools3.jpg)
+
+the newest tool is real time plotting of data: With simple interface you can plot numerical data in different layouts:
+[!plots](2021-22-2-tools4.jpg)
+
+
+###Conclusion
+I have created the log viewer in order to have modern, fast and friendly Log viewer that will improve productivity during work time so everyone could focus on solving the problem at hand instead of getting blocked do to old log viewers are frameworks.
+
+I can say with confident that my log viewer saved a lot of wasted time and frustration for the developers. We used it daily with many improvements along the way.
+
+The application has public API to create custom log providers so if you have logs that are not common you can create your own parser and incorporate it in the application.
+
+Feel free to comment here or at Github or event create your own data providers for Analogy Log Viewer.
+
+Happy coding :)
+
+Lior Banai @ Github
