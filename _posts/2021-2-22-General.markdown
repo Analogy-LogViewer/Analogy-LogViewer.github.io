@@ -27,27 +27,27 @@ I have also created AspNetCore extension that you can plug directly into your .N
 The application is very customizable to the end user needs. You can create yor own data providers with built-in specialized to your own needs.
 
 for example: the basic data provider will look something like this:
-![Main UI](2021-22-2-mainUI.jpg)
+![Main UI](2021-2-22-mainUI.jpg)
 but since you can plug in your own, you can create custom made provider.
-![Custom Provider](2021-22-2-CustomProvider.jpg)
+![Custom Provider](2021-2-22-CustomProvider.jpg)
 
 In this data provider there are additional tools, kafka Sniffer, new icons and ECG plotter. All done with just few interfaces implementations
-![Custom Provider plot](2021-22-2-CustomProviderPlot.jpg)
+![Custom Provider plot](2021-2-22-CustomProviderPlot.jpg)
 
 ###Tools
 
 Beside the standard filtering are viewing logs I have added many analyzing tools: I added many types of charts and graphs like the following:
 
-![Tools](2021-22-2-tools1.jpg)
+![Tools](2021-2-22-tools1.jpg)
 
 or timeline plots:
-![Timeline](2021-22-2-tools2.jpg)
+![Timeline](2021-2-22-tools2.jpg)
 
 and even Json Visualizer that can create tree like view of any Json object (including embedded Json in your log message):
-[!Json Viewer](2021-22-2-tools3.jpg)
+[!Json Viewer](2021-2-22-tools3.jpg)
 
 the newest tool is real time plotting of data: With simple interface you can plot numerical data in different layouts:
-[!plots](2021-22-2-tools4.jpg)
+[!plots](2021-2-22-tools4.jpg)
 
 
 ###Conclusion
